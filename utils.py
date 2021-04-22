@@ -6,7 +6,7 @@ dialogflow_session_client = dialogflow.SessionsClient()
 PROJECT_ID = "newsbot-rgqu"
 from gnewsclient import gnewsclient
 client=gnewsclient.NewsClient()
-
+client.location='India'
 def detect_intent_from_text(text, session_id, language_code='en'):
     session = dialogflow_session_client.session_path(PROJECT_ID, session_id)
     text_input = dialogflow.types.TextInput(text=text, language_code=language_code)
